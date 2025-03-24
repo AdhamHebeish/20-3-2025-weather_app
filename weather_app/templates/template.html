@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="generator" content="frappe">
+        {% block meta_block %}
+        {% include "templates/includes/meta_block.html" %}
+        {% endblock %}
+        <title>Weather | {% block title %}{{ title }}{% endblock %}</title>
+        {% block favicon %}
+        <link rel="icon" href="/static/images/favicon.svg" type="image/x-icon">
+        {% endblock %}
+        {%- block head -%}
+        {% include "templates/includes/head.html" %}
+        {%- endblock -%}
+        {%- block style %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+        {% if colocated_css -%}
+        <style>
+            {{colocated_css}}
+        </style>
+        {%- endif %}
+        {%- endblock -%}
+    </head>
+    <body>
+        <div class="content p-6 d-flex flex-column justify-content-center align-items-center">
+            {% block content %}
+            {{ content }}
+            {% endblock %}
+        </div>
+        {%- block footer -%}
+        {{ web_block(footer_template or 'Standard Footer') }}
+        {%- endblock -%}
+        {%- block script %}
+        {% if colocated_js -%}
+                <script>{{ colocated_js }}</script>
+            {%- endif %}
+        {%- endblock %}
+    </body>
+</html>
