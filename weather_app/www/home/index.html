@@ -1,13 +1,42 @@
 {% extends base_template_path %}
 {% block content %}
-<div class="content rounded">
-    <div class="row">
-        <div class="col"></div>
-        <div class="col"></div>
+<link rel="stylesheet" href="index.css" />
+<div class="container rounded" id="content">
+    <div class="row align-items-center">
+        <div class="col" id="weather">
+            <a href="weather">
+                <div>
+                    <img src="../static/images/cloudy-2-day.svg" class="img-fluid float-left">
+                </div>
+                <p class="mx-auto">Current Weather</p>
+            </a>
+        </div>
+        <div class="col" id="forecast">
+            <a href="forecast">
+                <div>
+                    <img src="../static/images/rainy-3-night.svg" class="img-fluid float-left">
+                </div>
+                <p class="mx-auto">Forecasted Weather</p>
+            </a>
+        </div>
     </div>
-    <div class="row">
-        <div class="col"></div>
-        <div class="col"></div>
+    <div class="row align-items-center">
+        <div class="col" id="alert">
+            <a href="alerts">
+                <div>
+                    <img src="../static/images/tropical-storm.svg" class="img-fluid float-left">
+                </div>
+                <p class="mx-auto">Weather Alerts</p>
+            </a>
+        </div>
+        <div class="col" id="search">
+            <a href="last_searched">
+                <div>
+                    <img src="../static/images/scattered-thunderstorms-day.svg" class="img-fluid float-left">
+                </div>
+                <p class="mx-auto">Last Searched Items</p>
+            </a>
+        </div>
     </div>
 </div>
 {% endblock %}
