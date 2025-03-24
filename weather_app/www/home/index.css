@@ -1,0 +1,35 @@
+#content {
+    background-color: #0523c9;
+    padding: 25px;
+}
+
+#weather {
+    background-color: #55a1ec;
+}
+
+#forecast {
+    background-color: #156ec5;
+}
+
+#alert {
+    background-color: #ff3a37;
+}
+
+#search {
+    background-color: #323232;
+}
+
+#search *{
+    color: #ffffff;
+}
+
+div.row > div.col {
+    border-radius: 7px;
+    border: 1px solid #727272;
+    margin: 2px;
+    padding: 10px;
+}
+
+img + * {
+    text-decoration: none;
+}
