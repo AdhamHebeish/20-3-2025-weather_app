@@ -5,7 +5,7 @@ import requests
 def search(q):
     url = "http://api.weatherapi.com/v1/search.json"
     args = {
-        "key": "4ceacd128ade4af3bd2190728252203",
+        "key": "",
         "q": q
     }
     response = requests.get(url, params=args)
@@ -33,7 +33,7 @@ def newlocalStorage(city,region,country,lat,lon,api):
 def current(q, aqi):
     url = "http://api.weatherapi.com/v1/current.json"
     args = {
-        "key": "4ceacd128ade4af3bd2190728252203",
+        "key": "",
         "q": q,
         "aqi" : aqi
     }
