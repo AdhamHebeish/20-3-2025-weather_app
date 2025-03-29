@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "{DD-MM-YYYY} {HH:MM:SS} [city],[country] ([lat],[lon])",
+ "autoname": "{DD-MM-YYYY} {HH:MM:SS} ([lat],[lon])",
  "creation": "2025-03-24 14:20:07.444749",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -65,7 +65,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-24 15:19:08.217344",
+ "modified": "2025-03-29 03:13:41.658367",
  "modified_by": "Administrator",
  "module": "Weather App",
  "name": "localStorage",
