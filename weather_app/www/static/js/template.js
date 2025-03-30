@@ -1,5 +1,6 @@
 function searchCity(method) {
     document.getElementById("result").innerHTML = "";
+    document.getElementById("body").className = "container padded";
     document.getElementById("error").innerHTML = "";
     let input = document.getElementById("search").value;
     document.getElementById("search").value = "";
@@ -106,7 +107,6 @@ function appendlocalStorage(city,region,country,lat,lon,api) {
         },
         callback: function(result) {
             let response = result.message;
-            console.log(response)
             if (response == 201) {
             } else {
                 frappe.msgprint({

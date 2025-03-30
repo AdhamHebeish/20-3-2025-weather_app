@@ -2,6 +2,22 @@ body {
     background-color: #c6e0f7;
 }
 
-.lb {
+.lt {
     border-top: 1px solid #7c7c7c;
+}
+
+.lb {
+    border-bottom: 1px solid #7c7c7c;
+}
+
+.lr{
+    border: 1px solid #7c7c7c;
+}
+
+.padded {
+    padding: 25px;
+}
+
+h2,h3,h4,h5,h6,p {
+    margin: 0;
 }
