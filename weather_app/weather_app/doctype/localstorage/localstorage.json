@@ -1,0 +1,91 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "{DD-MM-YYYY} {HH:MM:SS} ([lat],[lon])",
+ "creation": "2025-03-24 14:20:07.444749",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "city_data_section",
+  "city",
+  "country",
+  "lat",
+  "column_break_kfjm",
+  "region",
+  "api",
+  "lon"
+ ],
+ "fields": [
+  {
+   "fieldname": "city_data_section",
+   "fieldtype": "Section Break",
+   "label": "City Data"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "City",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "lat",
+   "fieldtype": "Float",
+   "label": "Latitude"
+  },
+  {
+   "fieldname": "column_break_kfjm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "api",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Called API",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lon",
+   "fieldtype": "Float",
+   "label": "Longitude"
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "Country",
+   "reqd": 1
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Data",
+   "label": "Region"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-03-29 03:13:41.658367",
+ "modified_by": "Administrator",
+ "module": "Weather App",
+ "name": "localStorage",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

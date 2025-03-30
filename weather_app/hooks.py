@@ -30,7 +30,7 @@ app_license = "mit"
 
 # include js, css files in header of web template
 web_include_css = "/static/css/template.css"
-# web_include_js = "/assets/weather_app/js/weather_app.js"
+web_include_js = "/static/js/template.js"
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "weather_app/public/scss/website"
@@ -239,7 +239,7 @@ home_page = "home"
 # ]
 
 # Automatically update python controller files with type annotations for this app.
-# export_python_type_annotations = True
+export_python_type_annotations = True
 
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs

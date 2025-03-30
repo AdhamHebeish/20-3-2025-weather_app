@@ -9,7 +9,7 @@
         {% endblock %}
         <title>Weather | {% block title %}{{ title }}{% endblock %}</title>
         {% block favicon %}
-        <link rel="icon" href="/static/images/favicon.svg" type="image/x-icon">
+        <link rel="icon" href="/static/images/favicon.svg" type="image/svg">
         {% endblock %}
         {%- block head -%}
         {% include "templates/includes/head.html" %}
@@ -22,10 +22,27 @@
         </style>
         {%- endif %}
         {%- endblock -%}
+        {% if boot.lang == "eo" %}
+	        <script type="text/javascript">
+		        var _jipt = [];
+        		_jipt.push(['project', 'frappe']);
+        	</script>
+        	<script type="text/javascript" src="https://cdn.crowdin.com/jipt/jipt.js"></script>
+	    {% endif %}
+        <script>
+            window.frappe = {};
+            frappe.ready_events = [];
+            frappe.ready = function (fn) {
+                frappe.ready_events.push(fn);
+            }
+            window.dev_server = {{ dev_server }};
+            window.socketio_port = {{ (frappe.socketio_port or 9000) }};
+            window.show_language_picker = {{ show_language_picker or 'false' }};
+        </script>
     </head>
     <body>
         <div class="content p-6 d-flex flex-column justify-content-center align-items-center">
-            <div class="container">
+            <div class="container text-center">
                 <a href="home" title="Go Back to home">
                     <h1>The Weather App</h1>
                 </a>
@@ -42,5 +59,15 @@
                 <script>{{ colocated_js }}</script>
             {%- endif %}
         {%- endblock %}
+        {% block base_scripts %}
+        <script>
+            frappe.boot = {{ boot }}
+            frappe.sys_defaults = frappe.boot.sysdefaults;
+        </script>
+        {{ include_script('frappe-web.bundle.js') }}
+        {% endblock %}
+        {%- for link in web_include_js %}
+            {{ include_script(link) }}
+        {%- endfor -%}
     </body>
 </html>
