@@ -73,7 +73,7 @@ function getWeather(lat,lon) {
             let caption = document.createElement("h5");
             let lastUpdate = document.createElement("p");
             caption.append(condition.text);
-            lastUpdate.append("Last Updated:" + weatherObject.last_updated);
+            lastUpdate.append("Last Updated: " + weatherObject.last_updated);
             weatherdiv.append(caption, lastUpdate);
             resultdiv.append(weatherdiv);
             let row = document.createElement("div");
