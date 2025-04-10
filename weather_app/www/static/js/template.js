@@ -95,7 +95,7 @@ function searchCity(method) {
 
 function appendlocalStorage(city,region,country,lat,lon,api) {
     frappe.call({
-        method:"weather_app.api.weather_api.newlocalStorage",
+        method:"weather_app.api.doctype_api.newlocalStorage",
         type:"GET",
         args:{
             city:city,
@@ -114,6 +114,9 @@ function appendlocalStorage(city,region,country,lat,lon,api) {
                     indicator:"red",
                     message:"Server Error: " + response});
             }
+        },
+        error: function(error) {
+            frappe.throw(error);
         }
     })
 }
